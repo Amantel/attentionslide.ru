@@ -1,0 +1,79 @@
+
+@font-face {
+  font-family: 'Muller-Thin';
+  src: local('Muller Thin'), local('Muller-Thin'),
+      url('fonts/MullerThin.woff2') format('woff2'),
+      url('fonts/MullerThin.woff') format('woff'),
+      url('fonts/MullerThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller-Bold';
+  src: local('Muller Bold'), local('Muller-Bold'),
+      url('fonts/MullerBlack.woff2') format('woff2'),
+      url('fonts/MullerBlack.woff') format('woff'),
+      url('fonts/MullerBlack.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+.m200 {
+  font-family: "Muller-Thin", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+.m700 {
+  font-family: "Muller-Bold", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Muller-Thin", Arial, sans-serif;
+
+  font-size: 24px;
+}
+
+.headline {
+  font-size: 46px;
+}
+
+#header {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.upper_menu {
+  list-style-type: none;
+}
+.upper_menu li {
+  display: inline;
+  padding: 20px;
+}
+
+.upper_menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+.upper_menu li a:hover {
+  text-decoration: underline;
+}
+
+#content_wrapper {
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: normal center;
+}
+
+
+.logo {
+  width: 100px;
+  padding-left:100px;
+}
