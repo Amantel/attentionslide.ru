@@ -1,0 +1,291 @@
+/* Это бывший page3 */
+
+@font-face {
+    font-family: 'Muller-Thin';
+    src: local('Muller Thin'), local('Muller-Thin'),
+        url('fonts/MullerThin.woff2') format('woff2'),
+        url('fonts/MullerThin.woff') format('woff'),
+        url('fonts/MullerThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Muller-Bold';
+    src: local('Muller Bold'), local('Muller-Bold'),
+        url('fonts/MullerBlack.woff2') format('woff2'),
+        url('fonts/MullerBlack.woff') format('woff'),
+        url('fonts/MullerBlack.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+
+
+* {
+    font-family: "Muller-Thin", Arial, sans-serif;
+
+}
+
+A {
+    color: black;
+    text-decoration: none;
+}
+
+A:visited {
+    color: black;
+    text-decoration: none;
+}
+
+A:active {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container .head {
+    display: flex;
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.container .head .logo {
+    height: 120px;
+    width: 120px;
+    display: block;
+}
+
+.container .head .menu {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container .head .menu h3 {
+    margin-top: -14px;
+    font-size: 20px;
+}
+
+.container .head .menu h3:not(:last-child) {
+    padding-right: 100px;
+}
+
+.container .content .hamburger_menu {
+    display: none;
+}
+
+.container .content .contenthead {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 20%;
+}
+
+.container .content .contenthead p {
+    margin: 0 auto;
+    /*font-weight: bold;*/
+    font-size: 350%; 
+    font-family: "Muller-Bold", Arial, sans-serif;
+
+
+}
+
+.container .content .description {
+    position: relative;
+    padding-left: 20%;
+}
+
+.container .content .description p {
+    margin: 0 auto;
+    font-size: 180%;
+}
+
+.container .content .slideChoose {
+    position: relative;
+}
+
+.container .content .slideChoose a {
+    position: relative;
+    cursor: pointer;
+    left: 20%;
+    margin-top: 5%;
+    font-size: 180%;
+    display: inline-block; 
+    text-decoration: underline;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .container .head .menu {
+        left: 40%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .container .head {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .head .logo {
+        position: relative;
+        height: 180px;
+        width: 180px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container .head .menu {
+        display: none;
+    }
+
+    .container .content .hamburger_menu {
+        display: block;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+    
+    .container .content .hamburger_menu .menu_btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .container .content .hamburger_menu .menu_btn > span,
+    .container .content .hamburger_menu .menu_btn > span::before,
+    .container .content .hamburger_menu .menu_btn > span::after {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+    
+    .container .content .hamburger_menu .menu_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .container .content .hamburger_menu .menu_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .container .content .hamburger_menu .menu_box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 250px;
+        left: -100%;
+        width: 100%;
+        height: 25%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        background: white;
+        z-index: 1;
+    }
+    
+    .container .content .hamburger_menu .menu_box li {
+        text-align: center;
+    }
+    
+    .container .content .hamburger_menu .menu_box .menu_item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 40px;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    
+    .container .content .hamburger_menu .menu_box .menu_item:hover {
+        background-color: #CFD8DC;
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span {
+        transform: rotate(45deg);
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    #menu__toggle:checked ~ .menu_box {
+        visibility: visible;
+        left: 0%;
+    }
+
+    .container .head .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .container .content .contenthead {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .container .content .contenthead p {
+        position: relative;
+        right: 50%;
+        transform: translateX(38%);
+
+    }
+
+    .container .content .description p {
+        position: relative;
+        right: 50%;
+        transform: translateX(38%);
+    }
+    
+    .container .content .slideChoose {
+        padding-bottom: 30px;
+    }
+
+    .container .content .slideChoose a {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

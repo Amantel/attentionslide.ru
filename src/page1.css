@@ -1,0 +1,221 @@
+@font-face { 
+    font-family: "Muller";
+    src: url(fonts/MullerFontLight.ttf) format("truetype");
+    font-weight: lighter;
+}
+
+@font-face { 
+    font-family: "Muller";
+    src: url(fonts/MullerFontLight.ttf) format("truetype");
+    font-weight: bolder;
+}
+
+* {
+    font-family: "Muller";
+}
+
+A {
+    color: black;
+    text-decoration: none;
+}
+
+A:visited {
+    color: black;
+    text-decoration: none;
+}
+
+A:active {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container .logowrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.container .logowrapper .logo {
+    position: relative;
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+
+.container .logowrapper .menu {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container .logowrapper .menu h3 {
+    margin-top: -14px;
+    font-size: 20px;
+}
+
+.container .logowrapper .menu h3:not(:last-child) {
+    padding-right: 100px;
+}
+
+.container .hamburger_menu {
+    display: none;
+}
+
+.container .categories {
+    position: relative;
+}
+
+.container .categories a {
+    text-decoration: none;
+}
+
+.container .categories h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .container .logowrapper .logo {
+        float: none;
+    }
+
+    .container .categories {
+        margin-top: 50px;
+    }
+
+    .container .categories h3 {
+        font-size: 45px;
+    }
+
+    .container .logowrapper .menu {
+        left: 40%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-width: 768px) {
+    .container .logowrapper .logo {
+        margin: 0 auto;
+    }
+
+    .container .logowrapper .menu {
+        display: none;
+    }
+
+    .container .hamburger_menu {
+        display: block;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+    
+    .container .hamburger_menu .menu_btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 20px;
+        left: 5%;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .container .hamburger_menu .menu_btn > span,
+    .container .hamburger_menu .menu_btn > span::before,
+    .container .hamburger_menu .menu_btn > span::after {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+    
+    .container .hamburger_menu .menu_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    
+    .container .hamburger_menu .menu_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    .container .hamburger_menu .menu_box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 160px;
+        left: -100%;
+        width: 100%;
+        height: 25%;
+        margin: 0;
+        padding: 70px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        background: white;
+        z-index: 1;
+    }
+    
+    .container .hamburger_menu .menu_box li {
+        text-align: center;
+    }
+    
+    .container .hamburger_menu .menu_box .menu_item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 40px;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    
+    .container .hamburger_menu .menu_box .menu_item:hover {
+        background-color: #CFD8DC;
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span {
+        transform: rotate(45deg);
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    
+    #menu__toggle:checked ~ .menu_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    #menu__toggle:checked ~ .menu_box {
+        visibility: visible;
+        left: 0%;
+    }
+    
+    .container .categories {
+        margin-top: 50px;
+    }
+
+    .container .categories h3 {
+        font-size: 45px;
+    }
+}

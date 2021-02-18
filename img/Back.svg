@@ -1,0 +1,5 @@
+<svg width="49" height="23" viewBox="0 0 49 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1" y1="11.5" x2="49" y2="11.5" stroke="black"/>
+<line x1="0.791673" y1="11.5455" x2="24.7917" y2="0.545468" stroke="black"/>
+<line y1="-0.5" x2="26.4008" y2="-0.5" transform="matrix(-0.909065 -0.416655 -0.416655 0.909065 25 23)" stroke="black"/>
+</svg>
