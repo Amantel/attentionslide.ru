@@ -44,14 +44,16 @@ body {
 }
 
 #header {
-  display: flex;
+  display: block;
   margin-bottom: 40px;
+  text-align:center;
 }
 
 .upper_menu {
+  display: inline-block;
   list-style-type: none;
 }
-.upper_menu li {
+.upper_menu li {  
   display: inline;
   padding: 20px;
 }
@@ -72,8 +74,32 @@ body {
   place-items: normal center;
 }
 
+.pull-left {
+  float: left;
+}
+
 
 .logo {
   width: 100px;
+  height: 100px;
   padding-left:100px;
+  position: absolute;
+}
+
+
+.flex_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex_item {
+  flex: 0 32%;
+  height: 100px;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+}
+
+.fake_block {
+  border: 2px black solid;
+  /*background-color: grey;*/
 }
