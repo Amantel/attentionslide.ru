@@ -120,6 +120,51 @@ A:active {
     text-decoration: underline;
 }
 
+
+.container .gallery {
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container .gallery .gallery-image {
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.container .gallery .gallery-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.container .backbutton {
+    display: flex;
+    align-items: center;
+}
+
+.container .backbutton p {
+    font-size: 40px;
+}
+
+.container .backbutton .backbutton-image {
+    position: relative;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+    left: 5%;
+}
+
+.container .backbutton p {
+    position: relative;
+    left: 10%;
+}
+
+
+
+
 @media(max-width: 1024px) {
     .container {
         max-width: 1000px;
@@ -128,6 +173,19 @@ A:active {
     .container .head .menu {
         left: 40%;
         transform: translateX(-50%);
+    }
+
+    
+    .container .categories {
+        margin-top: 50px;
+    }
+
+    .container .categories h3 {
+        font-size: 45px;
+    }
+
+    .container .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -288,4 +346,32 @@ A:active {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .container .categories {
+        margin-top: 50px;
+    }
+
+    .container .categories h3 {
+        font-size: 45px;
+    }
+
+    
+    .container .backbutton {
+        margin-top: 50px;
+    }
+
+    .container .backbutton p {
+        left: calc(50% - 60px);
+        transform: translateX(-50%);
+    }
+
+    .container .gallery {
+        display: block;
+    }
+
+    .container .gallery .gallery-image {
+        margin-bottom: 20px;
+    }
+
+
 }
