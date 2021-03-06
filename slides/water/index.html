@@ -7,7 +7,12 @@
     <link rel="stylesheet" type="text/css" href="../../src/main.css">
     <link rel="shortcut icon" type="image/png" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../src/fancy.css">
 
 </head>
 
@@ -18,9 +23,9 @@
                 <img src="../../img/logo.png" width="100%" height="100%">
             </div>
             <div class="menu">
-                <h3><a href="#">Проекты</a></h3>
-                <h3><a href="#">Слайды</a></h3>
-                <h3><a href="#">Контакты</a></h3>
+                <h3><a href="/project.html">Проект</a></h3>
+                <h3><a href="/slides.html">Слайды</a></h3>
+                <h3><a href="/contacts.html">Контакты</a></h3>
             </div>
 
 
@@ -29,7 +34,7 @@
         <div class="container">
             <div class="backbutton">
                 <img class="backbutton-image" src="../../img/Back.svg" width="100%" height="100%"
-                    onclick="location.href='../Страница 1/page1.html'">
+                    onclick="location.href='/slides.html'">
                 <p>Вода</p>
             </div>
         </div>
@@ -42,44 +47,64 @@
                 </label>
 
                 <ul class="menu_box">
-                    <li><a href="#" class="menu_item">Проекты</a></li>
-                    <li><a href="#" class="menu_item">Слайды</a></li>
-                    <li><a href="#" class="menu_item">Контакты</a></li>
+                    <li><a href="/project.html" class="menu_item">Проект</a></li>
+                    <li><a href="/slides.html" class="menu_item">Слайды</a></li>
+                    <li><a href="/contacts.html" class="menu_item">Контакты</a></li>
                 </ul>
             </div>
 
 
             <div class="gallery">
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
-                <a href="../../img/water.jpg" data-lightbox="gallery">
-                    <img class="gallery-image" src="../../img/water.jpg" alt="" />
-                </a>
    
+              <div class="gallery_item">
+                <a data-fancybox="gallery" href="../../img/water.jpg"><img  src="../../img/water_small.png" alt="" /></a>
+                <br/>
+                <a href="#">Скачать</a>
+              </div>
+                 
+              <div class="gallery_item">
+                <a data-fancybox="gallery" href="../../img/water.jpg"><img  src="../../img/water_small.png" alt="" /></a>
+                <br/>
+                <a href="#">Скачать</a>
+              </div>
+
+
+
             </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
-        integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
-        crossorigin="anonymous"></script>
+ <script>
+$('[data-fancybox="gallery"]').fancybox({
+    infobar: false,
+    toolbar: false,
+    caption : function( instance, item ) {
+        var caption = $(this).data('caption') || '';
 
+        if ( item.type === 'image' ) {
+            caption = (caption.length ? caption + '<br />' : '') + '<a target="_blank" href="' + item.src + '">Скачать</a>' ;
+        }
+
+        return caption;
+    },
+    btnTpl: {
+    
+        
+    // Arrows
+    arrowLeft:
+      '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+      '<div><svg width="61" height="49" viewBox="0 0 61 49" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.855162" y1="24.5113" x2="60.1949" y2="0.53644" stroke="black"/><line x1="1.1873" y1="24.1764" x2="60.5271" y2="48.1512" stroke="black"/></svg></div>' +
+      "</button>",
+
+    arrowRight:
+      '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+      '<div><svg width="61" height="49" viewBox="0 0 61 49" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="60.527" y1="24.1035" x2="1.18726" y2="48.0783" stroke="black"/><line x1="60.1949" y1="24.4383" x2="0.855131" y2="0.463502" stroke="black"/></svg></div>' +
+      "</button>",
+    }
+
+
+});
+ </script>
 </body>
 
 </html>

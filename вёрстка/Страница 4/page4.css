@@ -1,0 +1,138 @@
+@font-face { 
+    font-family: "Muller";
+    src: url(MullerFontLight.ttf) format("truetype");
+    font-weight: lighter;
+}
+
+@font-face { 
+    font-family: "Muller";
+    src: url(MullerFontLight.ttf) format("truetype");
+    font-weight: bolder;
+}
+
+* {
+    font-family: "Muller";
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container .head {
+    position: relative;
+    display: flex;
+    top: 20px;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+}
+
+.container .head p {
+    position: relative;
+    font-size: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0%;
+}
+
+.container .head .close {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    left: 87%;
+    margin-top: -3%;
+    cursor: pointer;
+}
+
+.container .picture {
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+.container .picture .img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container .navigation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.container .navigation .left {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 30%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.container .navigation .right {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    left: 65%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .container .head .close {
+        left: 75%;
+        margin-top: -5%;
+        height: 40px;
+        width: 40px;
+    }
+
+    .container .navigation .left {
+        left: 23%;
+    }
+
+    .container .navigation .right {
+        left: 73%;
+    }
+
+    .container .navigation .left, 
+    .container .navigation .right {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .container .head .close {
+        left: 70%;
+        margin-top: -6%;
+        height: 20px;
+        width: 20px;
+    }
+
+    .container .navigation .left {
+        left: 25%;
+    }
+
+    .container .navigation .right {
+        left: 68%;
+    }
+
+    .container .navigation .left, 
+    .container .navigation .right {
+        height: 20px;
+        width: 20px;
+    }
+}

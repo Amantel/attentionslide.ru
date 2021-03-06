@@ -1,30 +1,17 @@
-/* Это бывший page3 */
+@font-face { 
+    font-family: "Muller";
+    src: url(MullerFontLight.ttf) format("truetype");
+    font-weight: lighter;
+}
 
-@font-face {
-    font-family: 'Muller-Thin';
-    src: local('Muller Thin'), local('Muller-Thin'),
-        url('fonts/MullerThin.woff2') format('woff2'),
-        url('fonts/MullerThin.woff') format('woff'),
-        url('fonts/MullerThin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Muller-Bold';
-    src: local('Muller Bold'), local('Muller-Bold'),
-        url('fonts/MullerBlack.woff2') format('woff2'),
-        url('fonts/MullerBlack.woff') format('woff'),
-        url('fonts/MullerBlack.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-
+@font-face { 
+    font-family: "Muller";
+    src: url(MullerFontLight.ttf) format("truetype");
+    font-weight: bolder;
+}
 
 * {
-    font-family: "Muller-Thin", Arial, sans-serif;
-
+    font-family: "Muller";
 }
 
 A {
@@ -40,10 +27,6 @@ A:visited {
 A:active {
     color: black;
     text-decoration: none;
-}
-
-A:hover {
-    text-decoration: underline;
 }
 
 .container {
@@ -93,11 +76,6 @@ A:hover {
 
 .container .content .contenthead p {
     margin: 0 auto;
-    /*font-weight: bold;*/
-    font-size: 350%; 
-    font-family: "Muller-Bold", Arial, sans-serif;
-
-
 }
 
 .container .content .description {
@@ -107,7 +85,6 @@ A:hover {
 
 .container .content .description p {
     margin: 0 auto;
-    font-size: 180%;
 }
 
 .container .content .slideChoose {
@@ -119,68 +96,7 @@ A:hover {
     cursor: pointer;
     left: 20%;
     margin-top: 5%;
-    font-size: 180%;
-    display: inline-block; 
-    text-decoration: underline;
 }
-
-
-.container .gallery {
-    margin: 0 auto;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.container .gallery .gallery-image {
-    width: 90%;
-    height: 70%;
-    margin: 0 auto;
-    cursor: pointer;
-}
-.container .gallery .gallery-image img {
-    width: 100%;
-    height: 100%;
-}
-
-
-.container .backbutton {
-    display: flex;
-    align-items: center;
-    margin-left: -50px;
-}
-
-.container .backbutton p {
-    font-size: 40px;
-}
-
-.container .backbutton .backbutton-image {
-    position: relative;
-    height: 30px;
-    width: 60px;
-    cursor: pointer;
-    left: 5%;
-}
-
-.container .backbutton p {
-    position: relative;
-    left: 10%;
-}
-
-.categories {
-    text-align: center;
-}
-
- .gallery {
-    margin-left: 10%;
-
- }
-.content .text_block p{
-    padding: 0.5em 0; 
-}
- .download_slide_block {
-   /*  text-align: center;*/
- }
 
 @media(max-width: 1024px) {
     .container {
@@ -191,23 +107,6 @@ A:hover {
         left: 40%;
         transform: translateX(-50%);
     }
-
-    
-    .container .categories {
-        margin-top: 50px;
-    }
-
-    .container .categories h3 {
-        font-size: 45px;
-    }
-
-    .container .gallery {
-        margin-top: 0;
-        grid-template-columns: repeat(2, 1fr);
-        text-align: center;
-    }
-
-    
 }
 
 @media(max-width: 768px) {
@@ -251,11 +150,6 @@ A:hover {
         height: 26px;
         cursor: pointer;
         z-index: 2;
-    }
-
-        
-    .container .backbutton {
-        margin-left: 0;
     }
     
     .container .content .hamburger_menu .menu_btn > span,
@@ -354,7 +248,6 @@ A:hover {
         position: relative;
         right: 50%;
         transform: translateX(38%);
-
     }
 
     .container .content .description p {
@@ -372,40 +265,4 @@ A:hover {
         left: 50%;
         transform: translateX(-50%);
     }
-
-    .container .categories {
-        margin-top: 50px;
-    }
-
-    .container .categories h3 {
-        font-size: 45px;
-    }
-
-    
-    .container .backbutton {
-        margin-top: 50px;
-    }
-
-    .container .backbutton p {
-        left: calc(50% - 60px);
-        transform: translateX(-50%);
-    }
-
-    .container .gallery {
-        display: block;
-    }
-
-    .container .gallery .gallery-image {
-        margin-bottom: 20px;
-    }
-
-
-    .content .text_block p{
-        text-align: center; 
-    }
-
-    .download_slide_block {
-        margin-top: -10px;
-      }
 }
-

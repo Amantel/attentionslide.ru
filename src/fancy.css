@@ -1,0 +1,27 @@
+/* Change backdrop color */
+.fancybox-bg {
+  background: #FFF;
+}
+ 
+
+.fancybox-caption {
+  background:none;
+  color:black
+}
+.fancybox-caption a, .fancybox-caption a:link, .fancybox-caption a:visited {
+  color:black;
+  font-size:24px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left{
+  padding:0;
+  background:none;
+  padding-left: 10px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right{
+  padding:0;
+  background:none;
+  padding-right: 10px;
+
+}

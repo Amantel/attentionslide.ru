@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    grid-gap: 1em;
+  }
+  
+  header,
+  aside,
+  article,
+  footer {
+    background: #ccc;
+    padding: 1em;
+  }
+  
+  
+  
+  /* Demo Specific Styles */
+  body {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1em 0;
+  }
+  
+  .grid > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /*----------*/
+
+  
+
+  #categories {
+    text-align: center;
+  }
+
+ 
