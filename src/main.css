@@ -186,6 +186,15 @@ A:hover {
    /*  text-align: center;*/
  }
 
+ 
+.container .head .logo2 {
+    height: 120px;
+    width: 120px;
+    display: block;
+    position: absolute;
+}
+
+
 @media(max-width: 1024px) {
     .container {
         max-width: 1000px;
@@ -420,6 +429,13 @@ A:hover {
     .download_slide_block {
         margin-top: -10px;
       }
+
+      
+    .container .head .logo2 {
+        display: inline-block;
+        position: relative;
+    }
+
 }
 
 .container .slides_head {
@@ -453,11 +469,4 @@ list-style-type: none;
 
 .menu_new ul > li:not(:last-child) {
     padding-right: 100px;
-}
-
-.container .head .logo2 {
-    height: 120px;
-    width: 120px;
-    display: block;
-    position: absolute;
 }
